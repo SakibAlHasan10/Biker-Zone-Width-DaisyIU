@@ -8,47 +8,163 @@
     <!-- tailwind and jaisyIU -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind custom  classes-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bick-primary': '#da373d',
+                        'bick-primary-bg': 'rgba(231, 111, 81, 0.10)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- css  custom  -->
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .font-Inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-Poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-<header>
-<nav>
-    <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Home</a></li>
-              <li><a>Soph</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <a class="btn btn-ghost normal-case text-xl">Biker Zone</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-              <li><a>Soph</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Login</a>
-        </div>
-      </div>
-</nav>
+<body class=" mt-14 mb-20">
+    <!-- header section -->
+    <header class="font-poppins md:container md:mx-auto">
+        <!-- navbar section -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-lgs">
+                            <li><a>Home</a></li>
+                            <li><a>Soph</a></li>
+                            <li><a>News</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case text-xl font-Poppins font-bold text-4">Biker Zone</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-Poppins font-medium text-lg">
+                        <li><a>Home</a></li>
+                        <li><a>Soph</a></li>
+                        <li><a>News</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class=" ">
+                    <a class="btn bg-bick-primary font-Poppins  font-bold text-4 text-white">Login</a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
 
-</header>
-<main>
+        <div class="carousel lg:h-[540px] bg-bick-primary-bg  w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="flex-col md:flex-row flex p-4 md:px-28  lg:max-p-24 items-center gap-7 flex-1">
+                    <div class="flex-1">
+                        <h1 class="text-6xl font-bold">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-base font-light my-7">Amet minim mollit non deserunt ullamco <br>
+                            est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                            <a class="btn bg-bick-primary font-Poppins  font-bold text-4 text-white">Purchase</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="/images/slider/bike1.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="flex-col md:flex-row flex p-4 md:px-28  lg:max-p-24 items-center gap-7 flex-1">
+                    <div class="flex-1">
+                        <h1 class="text-6xl font-bold">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-base font-light my-7">Amet minim mollit non deserunt ullamco <br>
+                            est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                            <a class="btn bg-bick-primary font-Poppins  font-bold text-4 text-white">Purchase</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="/images/slider/bike2.png" class="w-full" />
+                    </div>
+                </div>
+                
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="flex-col md:flex-row flex p-4 md:px-28  lg:max-p-24 items-center gap-7 flex-1">
+                    <div class="flex-1">
+                        <h1 class="text-6xl font-bold">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-base font-light my-7">Amet minim mollit non deserunt ullamco <br>
+                            est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                            <a class="btn bg-bick-primary font-Poppins  font-bold text-4 text-white">Purchase</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="/images/slider/bike3.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="flex-col md:flex-row flex p-4 md:px-28  lg:max-p-24 items-center gap-7 flex-1">
+                    <div class="flex-1">
+                        <h1 class="text-6xl font-bold">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-base font-light my-7">Amet minim mollit non deserunt ullamco <br>
+                            est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                            <a class="btn bg-bick-primary font-Poppins  font-bold text-4 text-white">Purchase</a>
+                    </div>
+                    <div class="flex-1">
+                        <img src="/images/slider/bike4.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
 
-</main>
-<footer>
 
-</footer>
+    </header>
+    <main class="md:container md:mx-auto">
+
+    </main>
+    <footer>
+
+    </footer>
 
 </body>
 
